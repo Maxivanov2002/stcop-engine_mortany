@@ -442,9 +442,7 @@ void CRender::Calculate				()
 
 			// Determine visibility for dynamic part of scene
 			set_Object							(0);
-			if (ps_r1_flags.test(R1FLAG_ACTOR_SHADOW)) {
-				g_hud->Render_First();
-			}
+			g_hud->Render_First					( );	// R1 shadows
 			g_hud->Render_Last					( );	
 			u32 uID_LTRACK						= 0xffffffff;
 			if (phase==PHASE_NORMAL)			{

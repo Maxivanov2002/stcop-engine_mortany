@@ -165,7 +165,6 @@ Flags32		ps_r2_ls_flags_ext			= {
 		|R2FLAGEXT_ENABLE_TESSELLATION
 	};
 
-Flags32 ps_r__common_flags = {};
 float		ps_r2_df_parallax_h			= 0.02f;
 float		ps_r2_df_parallax_range		= 75.f;
 float		ps_r2_tonemap_middlegray	= 1.f;			// r2-only
@@ -776,8 +775,6 @@ void		xrRender_initconsole	()
 	// 1 - enabled
 	// 2 - forced hardware skinning (renderer can not override)
 	CMD4(CCC_Integer,	"r1_software_skinning",	&ps_r1_SoftwareSkinning,	0,		2	);
-
-	CMD3(CCC_Mask, "r1_actor_shadow", &ps_r1_flags, R1FLAG_ACTOR_SHADOW);
 
 	// R2
 	CMD4(CCC_Float,		"r2_ssa_lod_a",			&ps_r2_ssaLOD_A,			16,		96		);
