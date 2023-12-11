@@ -5,6 +5,7 @@
 #include "../../xrEngine/igame_persistent.h"
 #include "../../xrEngine/environment.h"
 #include "../../xrEngine/CustomHUD.h"
+#include "../../xrEngine\xr_object.h"
 
 #include "FBasicVisual.h"
 
@@ -687,7 +688,7 @@ void	R_dsgraph_structure::r_dsgraph_render_subspace	(IRender_Sector* _sector, CF
 		g_SpatialSpace->q_frustum
 			(
 			lstRenderables,
-			ISpatial_DB::O_ORDERED,
+			STYPE_RENDERABLE + STYPE_RENDERABLESHADOW,
 			STYPE_RENDERABLE,
 			ViewBase
 			);
